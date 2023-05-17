@@ -1,0 +1,12 @@
+
+{% extends 'base.html' %}
+{% block page_content %}
+
+{% for todo in  object_list %}
+   <div>
+       <a href="{% url 'todo details' todo.pk %}">{{ todo.title }}</a>
+   </div>
+    {% endfor %}
+
+{% endblock %}
+
